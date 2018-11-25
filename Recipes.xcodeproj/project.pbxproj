@@ -19,6 +19,7 @@
 		A0A29A1121AB37B6001D74AB /* MiniListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A1021AB37B6001D74AB /* MiniListTableViewController.swift */; };
 		A0A29A1321AB37D1001D74AB /* CardListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A1221AB37D1001D74AB /* CardListTableViewController.swift */; };
 		A0A29A1521AB3850001D74AB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A1421AB3850001D74AB /* TableViewController.swift */; };
+		A0A29A1721AB4165001D74AB /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A1621AB4165001D74AB /* CardTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		A0A29A1021AB37B6001D74AB /* MiniListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniListTableViewController.swift; sourceTree = "<group>"; };
 		A0A29A1221AB37D1001D74AB /* CardListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListTableViewController.swift; sourceTree = "<group>"; };
 		A0A29A1421AB3850001D74AB /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		A0A29A1621AB4165001D74AB /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardTableViewCell.swift; path = Recipes/Controller/CardTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		A0A29A0021AB0686001D74AB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A0A29A1621AB4165001D74AB /* CardTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				A0A29A0F21AB3117001D74AB /* NavigationController.swift in Sources */,
 				A0A29A1321AB37D1001D74AB /* CardListTableViewController.swift in Sources */,
 				A0A29A0321AB0BBE001D74AB /* Recipe.swift in Sources */,
+				A0A29A1721AB4165001D74AB /* CardTableViewCell.swift in Sources */,
 				A0A299EE21AB03A9001D74AB /* AppDelegate.swift in Sources */,
 				A0A29A0721AB11FD001D74AB /* PreparationTime.swift in Sources */,
 				A0A29A1521AB3850001D74AB /* TableViewController.swift in Sources */,

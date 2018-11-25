@@ -97,13 +97,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6Nr-ne-t1o">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCardCell" rowHeight="223" id="6Nr-ne-t1o" customClass="CardTableViewCell" customModule="Recipes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="223"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Nr-ne-t1o" id="uGH-zX-Mhz">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="222.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lhd-m5-ODh">
+                                            <rect key="frame" x="25" y="15" width="270" height="120"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="120" id="AWp-qs-CoG"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEQ-se-cCK">
+                                            <rect key="frame" x="25" y="150" width="270" height="57.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="bEQ-se-cCK" secondAttribute="trailing" constant="25" id="4ch-3j-A2e"/>
+                                        <constraint firstItem="bEQ-se-cCK" firstAttribute="top" secondItem="Lhd-m5-ODh" secondAttribute="bottom" constant="15" id="7ev-wa-RjS"/>
+                                        <constraint firstAttribute="trailing" secondItem="Lhd-m5-ODh" secondAttribute="trailing" constant="25" id="MS1-21-qXx"/>
+                                        <constraint firstItem="bEQ-se-cCK" firstAttribute="leading" secondItem="uGH-zX-Mhz" secondAttribute="leading" constant="25" id="Pbc-QR-NsW"/>
+                                        <constraint firstAttribute="bottom" secondItem="bEQ-se-cCK" secondAttribute="bottom" constant="15" id="d4E-Qn-uRo"/>
+                                        <constraint firstItem="Lhd-m5-ODh" firstAttribute="top" secondItem="uGH-zX-Mhz" secondAttribute="top" constant="15" id="f6h-bJ-KCn"/>
+                                        <constraint firstItem="Lhd-m5-ODh" firstAttribute="leading" secondItem="uGH-zX-Mhz" secondAttribute="leading" constant="25" id="qU8-JT-0Wn"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="recipeImageView" destination="Lhd-m5-ODh" id="qaM-sk-NWJ"/>
+                                    <outlet property="recipeTitleLabel" destination="bEQ-se-cCK" id="4C8-M6-mEZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -115,7 +142,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPV-gd-kRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2738" y="229"/>
+            <point key="canvasLocation" x="2737.5" y="228.16901408450704"/>
         </scene>
         <!--CardList-->
         <scene sceneID="qAY-uA-XTe">
