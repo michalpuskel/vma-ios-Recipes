@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A0A299EE21AB03A9001D74AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A299ED21AB03A9001D74AB /* AppDelegate.swift */; };
-		A0A299F021AB03A9001D74AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A299EF21AB03A9001D74AB /* ViewController.swift */; };
 		A0A299F321AB03A9001D74AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A299F121AB03A9001D74AB /* Main.storyboard */; };
 		A0A299F521AB03AA001D74AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A299F421AB03AA001D74AB /* Assets.xcassets */; };
 		A0A299F821AB03AA001D74AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A299F621AB03AA001D74AB /* LaunchScreen.storyboard */; };
@@ -21,7 +20,6 @@
 /* Begin PBXFileReference section */
 		A0A299EA21AB03A8001D74AB /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A299ED21AB03A9001D74AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A0A299EF21AB03A9001D74AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A0A299F221AB03A9001D74AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0A299F421AB03AA001D74AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0A299F721AB03AA001D74AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,11 +64,10 @@
 				A0A29A0021AB0686001D74AB /* View */,
 				A0A29A0121AB0692001D74AB /* Controller */,
 				A0A299ED21AB03A9001D74AB /* AppDelegate.swift */,
-				A0A299EF21AB03A9001D74AB /* ViewController.swift */,
 				A0A299F121AB03A9001D74AB /* Main.storyboard */,
-				A0A299F421AB03AA001D74AB /* Assets.xcassets */,
 				A0A299F621AB03AA001D74AB /* LaunchScreen.storyboard */,
 				A0A299F921AB03AA001D74AB /* Info.plist */,
+				A0A299F421AB03AA001D74AB /* Assets.xcassets */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -173,7 +170,6 @@
 			files = (
 				A0A29A0921AB13A9001D74AB /* Author.swift in Sources */,
 				A0A29A0321AB0BBE001D74AB /* Recipe.swift in Sources */,
-				A0A299F021AB03A9001D74AB /* ViewController.swift in Sources */,
 				A0A299EE21AB03A9001D74AB /* AppDelegate.swift in Sources */,
 				A0A29A0721AB11FD001D74AB /* PreparationTime.swift in Sources */,
 				A0A29A0521AB11C8001D74AB /* FoodCategory.swift in Sources */,
