@@ -12,6 +12,10 @@
 		A0A299F321AB03A9001D74AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A299F121AB03A9001D74AB /* Main.storyboard */; };
 		A0A299F521AB03AA001D74AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A299F421AB03AA001D74AB /* Assets.xcassets */; };
 		A0A299F821AB03AA001D74AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A299F621AB03AA001D74AB /* LaunchScreen.storyboard */; };
+		A0A29A0321AB0BBE001D74AB /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A0221AB0BBE001D74AB /* Recipe.swift */; };
+		A0A29A0521AB11C8001D74AB /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A0421AB11C8001D74AB /* FoodCategory.swift */; };
+		A0A29A0721AB11FD001D74AB /* PreparationTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A0621AB11FD001D74AB /* PreparationTime.swift */; };
+		A0A29A0921AB13A9001D74AB /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A0821AB13A9001D74AB /* Author.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		A0A299F421AB03AA001D74AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0A299F721AB03AA001D74AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0A299F921AB03AA001D74AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0A29A0221AB0BBE001D74AB /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		A0A29A0421AB11C8001D74AB /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
+		A0A29A0621AB11FD001D74AB /* PreparationTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationTime.swift; sourceTree = "<group>"; };
+		A0A29A0821AB13A9001D74AB /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,9 @@
 		A0A299EC21AB03A9001D74AB /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				A0A299FF21AB067E001D74AB /* Model */,
+				A0A29A0021AB0686001D74AB /* View */,
+				A0A29A0121AB0692001D74AB /* Controller */,
 				A0A299ED21AB03A9001D74AB /* AppDelegate.swift */,
 				A0A299EF21AB03A9001D74AB /* ViewController.swift */,
 				A0A299F121AB03A9001D74AB /* Main.storyboard */,
@@ -62,6 +73,31 @@
 				A0A299F921AB03AA001D74AB /* Info.plist */,
 			);
 			path = Recipes;
+			sourceTree = "<group>";
+		};
+		A0A299FF21AB067E001D74AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A0A29A0421AB11C8001D74AB /* FoodCategory.swift */,
+				A0A29A0621AB11FD001D74AB /* PreparationTime.swift */,
+				A0A29A0821AB13A9001D74AB /* Author.swift */,
+				A0A29A0221AB0BBE001D74AB /* Recipe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A0A29A0021AB0686001D74AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A0A29A0121AB0692001D74AB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A29A0921AB13A9001D74AB /* Author.swift in Sources */,
+				A0A29A0321AB0BBE001D74AB /* Recipe.swift in Sources */,
 				A0A299F021AB03A9001D74AB /* ViewController.swift in Sources */,
 				A0A299EE21AB03A9001D74AB /* AppDelegate.swift in Sources */,
+				A0A29A0721AB11FD001D74AB /* PreparationTime.swift in Sources */,
+				A0A29A0521AB11C8001D74AB /* FoodCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
