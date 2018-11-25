@@ -9,21 +9,30 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Mini List Table View Controller-->
         <scene sceneID="52i-FB-tHG">
             <objects>
-                <tableViewController id="x76-Ow-7pJ" sceneMemberID="viewController">
+                <tableViewController id="x76-Ow-7pJ" customClass="MiniListTableViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Mo-jq-l6x">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kRv-9r-h6I">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RecipeMiniCell" textLabel="gmz-D2-09p" style="IBUITableViewCellStyleDefault" id="kRv-9r-h6I">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kRv-9r-h6I" id="JLM-MY-art">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gmz-D2-09p">
+                                            <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -32,7 +41,7 @@
                             <outlet property="delegate" destination="x76-Ow-7pJ" id="3hy-Xn-4fH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="edh-BK-PdD"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="edh-BK-PdD"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GT8-gc-Pzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,7 +68,7 @@
         <!--MiniList-->
         <scene sceneID="ovn-LS-h6J">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fSg-TS-BWB" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="fSg-TS-BWB" customClass="NavigationController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="MiniList" image="miniList" id="sSe-3O-XHF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1jj-0m-EyR">
@@ -67,6 +76,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wr7-nm-hbE">
+                        <rect key="frame" x="0.0" y="475" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="x76-Ow-7pJ" kind="relationship" relationship="rootViewController" id="cmG-b5-egw"/>
                     </connections>
@@ -75,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="1742" y="-603"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Card List Table View Controller-->
         <scene sceneID="vNr-gq-C4f">
             <objects>
-                <tableViewController id="nxC-Hy-iYe" sceneMemberID="viewController">
+                <tableViewController id="nxC-Hy-iYe" customClass="CardListTableViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RM7-3G-JSR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +111,7 @@
                             <outlet property="delegate" destination="nxC-Hy-iYe" id="TLB-Iy-mH8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="m1F-hC-UeD"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="m1F-hC-UeD"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPV-gd-kRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,7 +120,7 @@
         <!--CardList-->
         <scene sceneID="qAY-uA-XTe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f4q-gq-aEY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="f4q-gq-aEY" customClass="NavigationController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="CardList" image="cardList" id="2vb-FT-Wfe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sHj-Sv-oXO">
@@ -115,6 +128,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RgJ-QT-Buu">
+                        <rect key="frame" x="0.0" y="475" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="nxC-Hy-iYe" kind="relationship" relationship="rootViewController" id="GaF-e9-iVn"/>
                     </connections>

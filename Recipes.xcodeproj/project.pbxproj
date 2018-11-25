@@ -15,6 +15,10 @@
 		A0A29A0521AB11C8001D74AB /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A0421AB11C8001D74AB /* FoodCategory.swift */; };
 		A0A29A0721AB11FD001D74AB /* PreparationTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A0621AB11FD001D74AB /* PreparationTime.swift */; };
 		A0A29A0921AB13A9001D74AB /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A0821AB13A9001D74AB /* Author.swift */; };
+		A0A29A0F21AB3117001D74AB /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A0E21AB3117001D74AB /* NavigationController.swift */; };
+		A0A29A1121AB37B6001D74AB /* MiniListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A1021AB37B6001D74AB /* MiniListTableViewController.swift */; };
+		A0A29A1321AB37D1001D74AB /* CardListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A1221AB37D1001D74AB /* CardListTableViewController.swift */; };
+		A0A29A1521AB3850001D74AB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A1421AB3850001D74AB /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		A0A29A0421AB11C8001D74AB /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
 		A0A29A0621AB11FD001D74AB /* PreparationTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationTime.swift; sourceTree = "<group>"; };
 		A0A29A0821AB13A9001D74AB /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		A0A29A0E21AB3117001D74AB /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = Recipes/Model/NavigationController.swift; sourceTree = SOURCE_ROOT; };
+		A0A29A1021AB37B6001D74AB /* MiniListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniListTableViewController.swift; sourceTree = "<group>"; };
+		A0A29A1221AB37D1001D74AB /* CardListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListTableViewController.swift; sourceTree = "<group>"; };
+		A0A29A1421AB3850001D74AB /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +71,11 @@
 				A0A299FF21AB067E001D74AB /* Model */,
 				A0A29A0021AB0686001D74AB /* View */,
 				A0A29A0121AB0692001D74AB /* Controller */,
-				A0A299ED21AB03A9001D74AB /* AppDelegate.swift */,
-				A0A299F121AB03A9001D74AB /* Main.storyboard */,
-				A0A299F621AB03AA001D74AB /* LaunchScreen.storyboard */,
 				A0A299F921AB03AA001D74AB /* Info.plist */,
+				A0A299F621AB03AA001D74AB /* LaunchScreen.storyboard */,
+				A0A299ED21AB03A9001D74AB /* AppDelegate.swift */,
 				A0A299F421AB03AA001D74AB /* Assets.xcassets */,
+				A0A299F121AB03A9001D74AB /* Main.storyboard */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -93,6 +101,10 @@
 		A0A29A0121AB0692001D74AB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A0A29A0E21AB3117001D74AB /* NavigationController.swift */,
+				A0A29A1421AB3850001D74AB /* TableViewController.swift */,
+				A0A29A1021AB37B6001D74AB /* MiniListTableViewController.swift */,
+				A0A29A1221AB37D1001D74AB /* CardListTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,9 +181,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0A29A0921AB13A9001D74AB /* Author.swift in Sources */,
+				A0A29A1121AB37B6001D74AB /* MiniListTableViewController.swift in Sources */,
+				A0A29A0F21AB3117001D74AB /* NavigationController.swift in Sources */,
+				A0A29A1321AB37D1001D74AB /* CardListTableViewController.swift in Sources */,
 				A0A29A0321AB0BBE001D74AB /* Recipe.swift in Sources */,
 				A0A299EE21AB03A9001D74AB /* AppDelegate.swift in Sources */,
 				A0A29A0721AB11FD001D74AB /* PreparationTime.swift in Sources */,
+				A0A29A1521AB3850001D74AB /* TableViewController.swift in Sources */,
 				A0A29A0521AB11C8001D74AB /* FoodCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
