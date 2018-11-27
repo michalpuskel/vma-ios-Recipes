@@ -37,6 +37,8 @@ class TableViewController: UITableViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         originalNavBarBorder = navigationController?.navigationBar.shadowImage
+        
+        navigationController?.navigationBar.tintColor = .darkGray
     }
 
     // MARK: - Table view data source
