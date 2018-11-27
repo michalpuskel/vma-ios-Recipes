@@ -13,6 +13,8 @@ class TableViewController: UITableViewController {
     let recipes = Recipe.recipes()
     var selectedRecipeId: Int = 0
     
+    var originalNavBarBorder: UIImage?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -23,6 +25,8 @@ class TableViewController: UITableViewController {
         navigationItem.largeTitleDisplayMode = .always
         
         hidesBottomBarWhenPushed = false
+        
+        navigationController?.navigationBar.shadowImage = originalNavBarBorder
     }
 
     override func viewDidLoad() {
@@ -31,6 +35,8 @@ class TableViewController: UITableViewController {
         navigationItem.title = "Recipes"
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        originalNavBarBorder = navigationController?.navigationBar.shadowImage
     }
 
     // MARK: - Table view data source
