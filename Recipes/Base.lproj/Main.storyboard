@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="3945" y="-235"/>
         </scene>
-        <!--Ingredients View Controller-->
+        <!--Recipe Ingredients View Controller-->
         <scene sceneID="buN-us-tzi">
             <objects>
-                <viewController id="29I-dX-PKU" customClass="IngredientsViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="29I-dX-PKU" customClass="RecipeIngredientsViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eVy-0j-ySF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -48,8 +48,7 @@ class TableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! RecipeDetailViewController
-        vc.recipeId = selectedRecipeId
+        RecipeVC.recipeId = selectedRecipeId
     }
 
 }

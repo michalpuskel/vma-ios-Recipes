@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A07DF3A021AC796900F8940C /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DF39F21AC796900F8940C /* RecipeDetailViewController.swift */; };
-		A07DF3A421ACB0D600F8940C /* BorderLessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DF3A321ACB0D600F8940C /* BorderLessViewController.swift */; };
-		A07DF3A821ACC2F100F8940C /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DF3A721ACC2F100F8940C /* IngredientsViewController.swift */; };
+		A07DF3A821ACC2F100F8940C /* RecipeIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DF3A721ACC2F100F8940C /* RecipeIngredientsViewController.swift */; };
 		A0A299EE21AB03A9001D74AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A299ED21AB03A9001D74AB /* AppDelegate.swift */; };
 		A0A299F321AB03A9001D74AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A299F121AB03A9001D74AB /* Main.storyboard */; };
 		A0A299F521AB03AA001D74AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A299F421AB03AA001D74AB /* Assets.xcassets */; };
@@ -22,12 +21,12 @@
 		A0A29A1321AB37D1001D74AB /* CardListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A1221AB37D1001D74AB /* CardListTableViewController.swift */; };
 		A0A29A1521AB3850001D74AB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A1421AB3850001D74AB /* TableViewController.swift */; };
 		A0A29A1721AB4165001D74AB /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A1621AB4165001D74AB /* CardTableViewCell.swift */; };
+		A0E4460221ADADFB007D1FE8 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E4460121ADADFB007D1FE8 /* RecipeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A07DF39F21AC796900F8940C /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
-		A07DF3A321ACB0D600F8940C /* BorderLessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BorderLessViewController.swift; path = Recipes/Controller/BorderLessViewController.swift; sourceTree = SOURCE_ROOT; };
-		A07DF3A721ACC2F100F8940C /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
+		A07DF3A721ACC2F100F8940C /* RecipeIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredientsViewController.swift; sourceTree = "<group>"; };
 		A0A299EA21AB03A8001D74AB /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A299ED21AB03A9001D74AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0A299F221AB03A9001D74AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		A0A29A1221AB37D1001D74AB /* CardListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListTableViewController.swift; sourceTree = "<group>"; };
 		A0A29A1421AB3850001D74AB /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		A0A29A1621AB4165001D74AB /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardTableViewCell.swift; path = Recipes/Controller/CardTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		A0E4460121ADADFB007D1FE8 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				A0A29A1621AB4165001D74AB /* CardTableViewCell.swift */,
-				A07DF3A321ACB0D600F8940C /* BorderLessViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,8 +111,9 @@
 				A0A29A1421AB3850001D74AB /* TableViewController.swift */,
 				A0A29A1021AB37B6001D74AB /* MiniListTableViewController.swift */,
 				A0A29A1221AB37D1001D74AB /* CardListTableViewController.swift */,
+				A0E4460121ADADFB007D1FE8 /* RecipeViewController.swift */,
 				A07DF39F21AC796900F8940C /* RecipeDetailViewController.swift */,
-				A07DF3A721ACC2F100F8940C /* IngredientsViewController.swift */,
+				A07DF3A721ACC2F100F8940C /* RecipeIngredientsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,12 +193,12 @@
 				A0A29A1121AB37B6001D74AB /* MiniListTableViewController.swift in Sources */,
 				A0A29A1321AB37D1001D74AB /* CardListTableViewController.swift in Sources */,
 				A0A29A0321AB0BBE001D74AB /* Recipe.swift in Sources */,
-				A07DF3A421ACB0D600F8940C /* BorderLessViewController.swift in Sources */,
 				A0A29A1721AB4165001D74AB /* CardTableViewCell.swift in Sources */,
 				A0A299EE21AB03A9001D74AB /* AppDelegate.swift in Sources */,
+				A0E4460221ADADFB007D1FE8 /* RecipeViewController.swift in Sources */,
 				A07DF3A021AC796900F8940C /* RecipeDetailViewController.swift in Sources */,
 				A0A29A0721AB11FD001D74AB /* PreparationTime.swift in Sources */,
-				A07DF3A821ACC2F100F8940C /* IngredientsViewController.swift in Sources */,
+				A07DF3A821ACC2F100F8940C /* RecipeIngredientsViewController.swift in Sources */,
 				A0A29A1521AB3850001D74AB /* TableViewController.swift in Sources */,
 				A0A29A0521AB11C8001D74AB /* FoodCategory.swift in Sources */,
 			);

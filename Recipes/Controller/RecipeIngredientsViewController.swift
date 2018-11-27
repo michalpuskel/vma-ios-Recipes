@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IngredientsViewController: BorderLessViewController {
+class RecipeIngredientsViewController: RecipeViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,16 +16,5 @@ class IngredientsViewController: BorderLessViewController {
         navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "backArrow")
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "backArrow")
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

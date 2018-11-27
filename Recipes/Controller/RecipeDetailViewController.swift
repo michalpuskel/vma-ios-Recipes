@@ -8,10 +8,7 @@
 
 import UIKit
 
-class RecipeDetailViewController: BorderLessViewController {
-    
-    let recipes = Recipe.recipes()
-    var recipeId: Int = 0
+class RecipeDetailViewController: RecipeViewController {
     
     var originalBackButtonImage: UIImage?
     
@@ -23,7 +20,7 @@ class RecipeDetailViewController: BorderLessViewController {
 
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.largeTitleDisplayMode = .never
-        navigationItem.title = recipes[recipeId].foodCategory.navTitle
+        navigationItem.title = RecipeVC.recipes[RecipeVC.recipeId].foodCategory.navTitle
     
         navigationController?.toolbar.barTintColor = #colorLiteral(red: 0.2980392157, green: 0.8509803922, blue: 0.3921568627, alpha: 1)
         
@@ -37,15 +34,4 @@ class RecipeDetailViewController: BorderLessViewController {
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = originalBackButtonImage
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
