@@ -9,6 +9,13 @@
 import UIKit
 
 class MiniListTableViewController: TableViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "miniList")
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "miniList")
+    }
 
     // MARK: - Table view data source
     
@@ -20,6 +27,14 @@ class MiniListTableViewController: TableViewController {
         cell.textLabel?.text = recipe.titlePrimary
 
         return cell
+    }
+    
+    // MARK: - Navigation
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        super.tableView(tableView, didSelectRowAt: indexPath)
+        
+        performSegue(withIdentifier: "miniListSegueDetail", sender: nil)
     }
 
 }

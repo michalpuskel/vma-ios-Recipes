@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6uy-fW-yuE">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Mini List Table View Controller-->
         <scene sceneID="52i-FB-tHG">
             <objects>
-                <tableViewController id="x76-Ow-7pJ" customClass="MiniListTableViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="x76-Ow-7pJ" customClass="MiniListTableViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Mo-jq-l6x">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RecipeMiniCell" textLabel="gmz-D2-09p" style="IBUITableViewCellStyleDefault" id="kRv-9r-h6I">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kRv-9r-h6I" id="JLM-MY-art">
-                                    <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gmz-D2-09p">
-                                            <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="324" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -42,10 +43,51 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="edh-BK-PdD"/>
+                    <connections>
+                        <segue destination="FdY-bj-jc7" kind="show" identifier="miniListSegueDetail" id="24z-dr-P3r"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GT8-gc-Pzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2739" y="-602"/>
+        </scene>
+        <!--Recipe Detail View Controller-->
+        <scene sceneID="QaP-gf-vQN">
+            <objects>
+                <viewController id="FdY-bj-jc7" customClass="RecipeDetailViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IW4-Ji-9bT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HMU-hK-eBf"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="VIEW RECIPE" width="500" style="done" id="v9G-0s-Z48">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="29I-dX-PKU" kind="show" id="VFw-K0-GX7"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xei-45-D62" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3945" y="-235"/>
+        </scene>
+        <!--Ingredients View Controller-->
+        <scene sceneID="buN-us-tzi">
+            <objects>
+                <viewController id="29I-dX-PKU" customClass="IngredientsViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eVy-0j-ySF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yYk-vc-4o1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPf-TX-KyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4865" y="-234"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Tjy-Jc-2am">
@@ -68,16 +110,16 @@
         <!--MiniList-->
         <scene sceneID="ovn-LS-h6J">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="fSg-TS-BWB" customClass="NavigationController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="fSg-TS-BWB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="MiniList" image="miniList" id="sSe-3O-XHF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1jj-0m-EyR">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wr7-nm-hbE">
-                        <rect key="frame" x="0.0" y="475" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="685" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
@@ -91,27 +133,27 @@
         <!--Card List Table View Controller-->
         <scene sceneID="vNr-gq-C4f">
             <objects>
-                <tableViewController id="nxC-Hy-iYe" customClass="CardListTableViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="nxC-Hy-iYe" customClass="CardListTableViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RM7-3G-JSR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCardCell" rowHeight="223" id="6Nr-ne-t1o" customClass="CardTableViewCell" customModule="Recipes" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="223"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="223"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Nr-ne-t1o" id="uGH-zX-Mhz">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="222.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="222.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lhd-m5-ODh">
-                                            <rect key="frame" x="25" y="15" width="270" height="120"/>
+                                            <rect key="frame" x="25" y="15" width="325" height="120"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="120" id="AWp-qs-CoG"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEQ-se-cCK">
-                                            <rect key="frame" x="25" y="150" width="270" height="57.5"/>
+                                            <rect key="frame" x="25" y="150" width="325" height="57.666666666666657"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -139,6 +181,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="m1F-hC-UeD"/>
+                    <connections>
+                        <segue destination="FdY-bj-jc7" kind="show" identifier="cardListSegueDetail" id="dhV-TR-vHh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPV-gd-kRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,16 +192,16 @@
         <!--CardList-->
         <scene sceneID="qAY-uA-XTe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="f4q-gq-aEY" customClass="NavigationController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="f4q-gq-aEY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="CardList" image="cardList" id="2vb-FT-Wfe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sHj-Sv-oXO">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RgJ-QT-Buu">
-                        <rect key="frame" x="0.0" y="475" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="685" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
@@ -172,4 +217,7 @@
         <image name="cardList" width="30" height="30"/>
         <image name="miniList" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="24z-dr-P3r"/>
+    </inferredMetricsTieBreakers>
 </document>

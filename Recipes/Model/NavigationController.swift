@@ -9,12 +9,5 @@
 import UIKit
 
 class NavigationController: UINavigationController {
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
-        self.tabBarController?.tabBar.isHidden = false
-        self.navigationController?.toolbar.isHidden = true
-    }
-
 }

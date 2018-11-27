@@ -11,20 +11,26 @@ import UIKit
 class TableViewController: UITableViewController {
     
     let recipes = Recipe.recipes()
+    var selectedRecipeId: Int = 0
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.tabBarController?.tabBar.isHidden = false
-        self.navigationController?.toolbar.isHidden = true
+        tabBarController?.tabBar.isHidden = false
+        navigationController?.toolbar.isHidden = true
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+        
+        hidesBottomBarWhenPushed = false
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .always
         navigationItem.title = "Recipes"
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 
     // MARK: - Table view data source
@@ -32,15 +38,18 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes.count
     }
-
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRecipeId = indexPath.row
+        
+        hidesBottomBarWhenPushed = true
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! RecipeDetailViewController
+        vc.recipeId = selectedRecipeId
+    }
 
 }

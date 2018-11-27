@@ -10,6 +10,13 @@ import UIKit
 
 class CardListTableViewController: TableViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "cardList")
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "cardList")
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -20,6 +27,14 @@ class CardListTableViewController: TableViewController {
         cell.recipeTitle = recipe.titlePrimary
 
         return cell
+    }
+
+    // MARK: - Navigation
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        super.tableView(tableView, didSelectRowAt: indexPath)
+        
+        performSegue(withIdentifier: "cardListSegueDetail", sender: nil)
     }
 
 }
