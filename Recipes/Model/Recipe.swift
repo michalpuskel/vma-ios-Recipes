@@ -73,8 +73,8 @@ will brown nicely.
         recipes.append(
             Recipe(imagePreview: #imageLiteral(resourceName: "rice.ico"), imageMain: #imageLiteral(resourceName: "rice.image"), imageIngredients: #imageLiteral(resourceName: "rice.ingredients"),
                    titlePrimary: "Rice Pilaf", titleSecondary: "Classic", foodCategory: .vegetarian,
-                   preparationTime: PreparationTime(hours: 5, minutes: 10), nutrition: 545, rating: 4,
-                   author: Author(name: "Janine Perkins", photo: #imageLiteral(resourceName: "janine_perkins")),
+                   preparationTime: PreparationTime(hours: 0, minutes: 57), nutrition: 312, rating: 3,
+                   author: Author(name: "Kyle McCaulley", photo: #imageLiteral(resourceName: "kyle_mccaulley")),
                    ingredients:"""
 1 (12 pound) whole turkey
 6 tablespoons butter, divided
