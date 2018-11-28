@@ -32,8 +32,6 @@ class RecipeDetailViewController: RecipeViewController {
 
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.largeTitleDisplayMode = .never
-    
-        navigationController?.toolbar.barTintColor = #colorLiteral(red: 0.2980392157, green: 0.8509803922, blue: 0.3921568627, alpha: 1)
         
         originalBackButtonImage = navigationController?.navigationBar.backIndicatorImage
         
@@ -45,6 +43,8 @@ class RecipeDetailViewController: RecipeViewController {
         
         navigationController?.navigationBar.backIndicatorImage = originalBackButtonImage
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = originalBackButtonImage
+        
+        navigationController?.toolbar.barTintColor = #colorLiteral(red: 0.2980392157, green: 0.8509803922, blue: 0.3921568627, alpha: 1)
     }
     
     override func viewDidLayoutSubviews() {

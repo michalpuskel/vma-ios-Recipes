@@ -15,6 +15,14 @@ class RecipeIngredientsViewController: RecipeViewController {
         
         navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "backArrow")
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "backArrow")
+        
+        navigationController?.toolbar.barTintColor = .white
+        
+        addRightBarButtonNextStep()
     }
 
+    @objc override func onNextStepTapped(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "ingredientsNextStepSegueFirstStep", sender: nil)
+    }
+    
 }
