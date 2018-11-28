@@ -12,6 +12,8 @@ class RecipeDetailViewController: RecipeViewController {
     
     var originalBackButtonImage: UIImage?
     
+    @IBOutlet private weak var authorImageView: RoundImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +27,8 @@ class RecipeDetailViewController: RecipeViewController {
         navigationController?.toolbar.barTintColor = #colorLiteral(red: 0.2980392157, green: 0.8509803922, blue: 0.3921568627, alpha: 1)
         
         originalBackButtonImage = navigationController?.navigationBar.backIndicatorImage
+        
+        setCustomContent()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +36,16 @@ class RecipeDetailViewController: RecipeViewController {
         
         navigationController?.navigationBar.backIndicatorImage = originalBackButtonImage
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = originalBackButtonImage
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        authorImageView.autoResizeCornerRadius()
+    }
+    
+    func setCustomContent() {
+        // todo
     }
     
 }

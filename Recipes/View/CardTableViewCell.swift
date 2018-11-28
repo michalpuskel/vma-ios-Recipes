@@ -22,7 +22,7 @@ class CardTableViewCell: UITableViewCell {
         }
     }
     
-    @IBOutlet weak var recipeImageView: UIImageView!
-    @IBOutlet weak var recipeTitleLabel: UILabel!
+    @IBOutlet private weak var recipeImageView: UIImageView!
+    @IBOutlet private weak var recipeTitleLabel: UILabel!
     
 }

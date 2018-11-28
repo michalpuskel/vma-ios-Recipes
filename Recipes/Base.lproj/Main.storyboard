@@ -182,11 +182,16 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DeL-CR-1vz">
                                         <rect key="frame" x="134.33333333333334" y="523" width="105.33333333333334" height="118"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kyle_mccaulley" translatesAutoresizingMaskIntoConstraints="NO" id="LaR-3C-cwB">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kyle_mccaulley" translatesAutoresizingMaskIntoConstraints="NO" id="LaR-3C-cwB" customClass="RoundImageView" customModule="Recipes" customModuleProvider="target">
                                                 <rect key="frame" x="11.333333333333314" y="0.0" width="82.666666666666671" height="82.666666666666671"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="LaR-3C-cwB" secondAttribute="height" multiplier="1:1" id="yD9-M3-bha"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="800" text="Author Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPF-vQ-6oa">
                                                 <rect key="frame" x="0.0" y="97.666666666666629" width="105.33333333333333" height="20.333333333333329"/>
@@ -228,6 +233,9 @@
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
+                    <connections>
+                        <outlet property="authorImageView" destination="LaR-3C-cwB" id="iu3-aA-VAM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xei-45-D62" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -392,6 +400,6 @@
         <image name="star" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="24z-dr-P3r"/>
+        <segue reference="dhV-TR-vHh"/>
     </inferredMetricsTieBreakers>
 </document>
