@@ -24,6 +24,7 @@ class RoundImageView: UIImageView {
     }
     
     func autoResizeCornerRadius() {
+        layoutIfNeeded()
         cornerRadius = frame.height / 2.0
     }
     
