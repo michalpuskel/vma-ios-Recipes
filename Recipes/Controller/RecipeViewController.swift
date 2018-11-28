@@ -26,7 +26,7 @@ class RecipeViewController: UIViewController {
     }
     
     func addRightBarButtonNextStep() {
-        let nextStepButton = UIBarButtonItem(title: "Next Step", style: .plain, target: self, action: #selector(onNextStepTapped(_:)))
+        let nextStepButton = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(onNextStepTapped(_:)))
         navigationItem.rightBarButtonItem = nextStepButton
     }
     

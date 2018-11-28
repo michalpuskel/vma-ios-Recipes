@@ -10,6 +10,8 @@ import UIKit
 
 class RecipeIngredientsViewController: RecipeViewController {
 
+    @IBOutlet private weak var ingredientsImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,10 +21,19 @@ class RecipeIngredientsViewController: RecipeViewController {
         navigationController?.toolbar.barTintColor = .white
         
         addRightBarButtonNextStep()
+        
+        setCustomContent()
     }
 
     @objc override func onNextStepTapped(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "ingredientsNextStepSegueFirstStep", sender: nil)
+    }
+    
+    private func setCustomContent() {
+        let recipe: Recipe = RecipeVC.recipes[RecipeVC.recipeId]
+        
+        navigationItem.title = recipe.titlePrimary.uppercased()
+        ingredientsImageView.image = recipe.imageIngredients
     }
     
 }
