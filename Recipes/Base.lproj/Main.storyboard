@@ -235,6 +235,7 @@
                     </toolbarItems>
                     <connections>
                         <outlet property="authorImageView" destination="LaR-3C-cwB" id="iu3-aA-VAM"/>
+                        <outlet property="authorNameLabel" destination="KPF-vQ-6oa" id="nct-v8-Y82"/>
                         <outlet property="nutritionLabel" destination="QdP-cC-a8H" id="YBD-X3-1wZ"/>
                         <outlet property="preparationTimeHoursGroup" destination="MHX-AJ-tCh" id="5dY-A7-LXM"/>
                         <outlet property="preparationTimeHoursLabel" destination="TV6-om-bGk" id="epF-Xk-Ebf"/>
@@ -243,6 +244,11 @@
                         <outlet property="primaryTitleLabel" destination="C5u-xb-hHM" id="bm3-35-rEY"/>
                         <outlet property="recipeImageView" destination="ZQc-v3-zRf" id="5G3-P1-CfE"/>
                         <outlet property="secondaryTitleLabel" destination="a7g-qC-NeH" id="CMr-RP-XAo"/>
+                        <outletCollection property="starImageViews" destination="GyM-TJ-FGH" collectionClass="NSMutableArray" id="HqW-YG-DaC"/>
+                        <outletCollection property="starImageViews" destination="WZs-2B-Iqt" collectionClass="NSMutableArray" id="gbn-rG-dby"/>
+                        <outletCollection property="starImageViews" destination="wDZ-SH-yF0" collectionClass="NSMutableArray" id="Ej3-Gb-ITl"/>
+                        <outletCollection property="starImageViews" destination="PvU-Vr-jWQ" collectionClass="NSMutableArray" id="kRk-wo-C60"/>
+                        <outletCollection property="starImageViews" destination="HmU-Fy-c7e" collectionClass="NSMutableArray" id="ILp-jd-mHQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xei-45-D62" userLabel="First Responder" sceneMemberID="firstResponder"/>

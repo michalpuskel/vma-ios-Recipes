@@ -13,6 +13,7 @@ class RecipeDetailViewController: RecipeViewController {
     var originalBackButtonImage: UIImage?
     
     @IBOutlet private weak var authorImageView: RoundImageView!
+    @IBOutlet private weak var authorNameLabel: UILabel!
     @IBOutlet private weak var recipeImageView: UIImageView!
     @IBOutlet private weak var primaryTitleLabel: UILabel!
     @IBOutlet private weak var secondaryTitleLabel: UILabel!
@@ -21,6 +22,7 @@ class RecipeDetailViewController: RecipeViewController {
     @IBOutlet private weak var preparationTimeHoursLabel: UILabel!
     @IBOutlet private weak var preparationTimeMinutesLabel: UILabel!
     @IBOutlet private weak var nutritionLabel: UILabel!
+    @IBOutlet private var starImageViews: [UIImageView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,10 +80,19 @@ class RecipeDetailViewController: RecipeViewController {
         
         nutritionLabel.text = String(recipe.nutrition)
         setRatingStars(for: recipe)
+        
+        authorImageView.image = recipe.author.photo
+        authorNameLabel.text = recipe.author.name
     }
     
     private func setRatingStars(for recipe: Recipe) {
-        
+        for (index, star) in starImageViews.enumerated() {
+            if index < recipe.rating {
+                star.tintColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+            } else {
+                star.tintColor = .lightGray
+            }
+        }
     }
     
 }
