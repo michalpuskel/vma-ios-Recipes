@@ -13,6 +13,14 @@ class RecipeDetailViewController: RecipeViewController {
     var originalBackButtonImage: UIImage?
     
     @IBOutlet private weak var authorImageView: RoundImageView!
+    @IBOutlet private weak var recipeImageView: UIImageView!
+    @IBOutlet private weak var primaryTitleLabel: UILabel!
+    @IBOutlet private weak var secondaryTitleLabel: UILabel!
+    @IBOutlet private weak var preparationTimeHoursGroup: UIStackView!
+    @IBOutlet private weak var preparationTimeMinutesGroup: UIStackView!
+    @IBOutlet private weak var preparationTimeHoursLabel: UILabel!
+    @IBOutlet private weak var preparationTimeMinutesLabel: UILabel!
+    @IBOutlet private weak var nutritionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +30,6 @@ class RecipeDetailViewController: RecipeViewController {
 
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.largeTitleDisplayMode = .never
-        navigationItem.title = RecipeVC.recipes[RecipeVC.recipeId].foodCategory.navTitle
     
         navigationController?.toolbar.barTintColor = #colorLiteral(red: 0.2980392157, green: 0.8509803922, blue: 0.3921568627, alpha: 1)
         
@@ -44,8 +51,37 @@ class RecipeDetailViewController: RecipeViewController {
         authorImageView.autoResizeCornerRadius()
     }
     
-    func setCustomContent() {
-        // todo
+    private func setCustomContent() {
+        let recipe: Recipe = RecipeVC.recipes[RecipeVC.recipeId]
+        
+        navigationItem.title = recipe.foodCategory.navTitle
+        recipeImageView.image = recipe.imageMain
+        primaryTitleLabel.text = recipe.titlePrimary.uppercased()
+        
+        if recipe.titleSecondary.isEmpty {
+            secondaryTitleLabel.isHidden = true
+        } else {
+            secondaryTitleLabel.text = recipe.titleSecondary
+        }
+        
+        if recipe.preparationTime.hours == 0 {
+            preparationTimeHoursGroup.isHidden = true
+        } else {
+            preparationTimeHoursLabel.text = String(recipe.preparationTime.hours)
+        }
+        
+        if recipe.preparationTime.minutes == 0 {
+            preparationTimeMinutesGroup.isHidden = true
+        } else {
+            preparationTimeMinutesLabel.text = String(recipe.preparationTime.minutes)
+        }
+        
+        nutritionLabel.text = String(recipe.nutrition)
+        setRatingStars(for: recipe)
+    }
+    
+    private func setRatingStars(for recipe: Recipe) {
+        
     }
     
 }
