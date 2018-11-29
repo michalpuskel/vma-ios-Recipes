@@ -17,6 +17,7 @@ class RecipeStepViewController: RecipeViewController {
     }
     
     @IBOutlet private weak var programmableToolBarButtonItem: UIBarButtonItem!
+    @IBOutlet private weak var stepMultiLineLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,9 @@ class RecipeStepViewController: RecipeViewController {
         let recipe: Recipe = RecipeVC.recipes[RecipeVC.recipeId]
         
         navigationItem.title = recipe.titlePrimary.uppercased() + " #\(stepId + 1)"
+        stepMultiLineLabel.attributedText = getMultiLineLabelText(for: recipe.recipeSteps[stepId],
+                                                                  withSpacing: 7.0,
+                                                                  withAlignment: .justified)
     }
     
     private func setBottomToolBarButtonGUI() {

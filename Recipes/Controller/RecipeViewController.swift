@@ -30,6 +30,19 @@ class RecipeViewController: UIViewController {
         navigationItem.rightBarButtonItem = nextStepButton
     }
     
+    func getMultiLineLabelText(for longText: String, withSpacing lineSpacing: CGFloat, withAlignment alignment: NSTextAlignment) -> NSMutableAttributedString {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = lineSpacing
+        paragraphStyle.alignment = alignment
+        
+        let attributedLongText = NSMutableAttributedString(string: longText)
+        attributedLongText.addAttribute(NSAttributedString.Key.paragraphStyle,
+                                               value: paragraphStyle,
+                                               range: NSMakeRange(0, attributedLongText.length))
+        
+        return attributedLongText
+    }
+    
     // MARK: - Navigation
     
     @objc func onNextStepTapped(_ sender: UIBarButtonItem) {

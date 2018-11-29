@@ -31,20 +31,9 @@ class RecipeIngredientsViewController: RecipeViewController {
         
         navigationItem.title = recipe.titlePrimary.uppercased()
         ingredientsImageView.image = recipe.imageIngredients
-        setMultiLineLabel(for: recipe.ingredients, withSpacing: 10.0)
-    }
-    
-    private func setMultiLineLabel(for ingredientsText: String, withSpacing lineSpacing: CGFloat) {
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = lineSpacing
-        paragraphStyle.alignment = .center
-        
-        let attributedIngredientsText = NSMutableAttributedString(string: ingredientsText)
-        attributedIngredientsText.addAttribute(NSAttributedString.Key.paragraphStyle,
-                                               value: paragraphStyle,
-                                               range: NSMakeRange(0, attributedIngredientsText.length))
-        
-        ingredientsMultiLineLabel.attributedText = attributedIngredientsText
+        ingredientsMultiLineLabel.attributedText = getMultiLineLabelText(for: recipe.ingredients,
+                                                                         withSpacing: 10.0,
+                                                                         withAlignment: .center)
     }
     
     // MARK: - Navigation

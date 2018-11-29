@@ -67,27 +67,12 @@ extension Recipe {
 1 pinch saffron (optional)
 1/4 teaspoon cayenne pepper
 """,
-                   recipeSteps: ["""
-Preheat oven to 350 degrees F (175 degrees C). Rinse and wash turkey.
-Discard the giblets, or add to pan if they are anyone's favorites.
-""",
-                                 """
-Place turkey in a Dutch oven or roasting pan. Separate the skin over the
-breast to make little pockets. Put 3 tablespoons of the butter on both
-sides between the skin and breast meat. This makes for very juicy
-breast meat.
-""",
-                                 """
-In a medium bowl, combine the water with the bouillon. Sprinkle in the
-parsley and minced onion. Pour over the top of the turkey. Sprinkle
-seasoning salt over the turkey.
-""",
-                                 """
-Cover with foil, and bake in the preheated oven 3 1/2 to 4 hours, until
-the internal temperature of the turkey reaches 180 degrees F (80
-degrees C). For the last 45 minutes or so, remove the foil so the turkey
-will brown nicely.
-""",
+                   recipeSteps: ["Preheat oven to 350 degrees F (175 degrees C).",
+                                 "Melt butter and olive oil in a large saucepan over medium heat. Add onion; cook and stir until onion is lightly browned, 7 to 8 minutes. Remove from heat.",
+                                 "Combine rice and onion mixture in a 9x13-inch casserole dish placed on a baking sheet. Stir thoroughly to coat the rice.",
+                                 "Combine chicken stock, salt, saffron, and cayenne pepper in a saucepan. Bring to a boil, reduce heat to low, and simmer for 5 minutes.",
+                                 "Pour chicken stock mixture over rice in the casserole dish and stir to combine. Spread mixture evenly along the bottom of the pan. Cover tightly with heavy-duty aluminum foil.",
+                                 "Bake in the preheated oven for 35 minutes. Remove from oven and allow to rest, covered, for 10 minutes. Remove foil and fluff with a fork to separate the grains of rice.",
                                  ]))
         
         return recipes

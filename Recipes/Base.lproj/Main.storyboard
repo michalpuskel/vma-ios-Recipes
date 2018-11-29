@@ -486,7 +486,44 @@
                     <view key="view" contentMode="scaleToFill" id="xKV-dz-B0P">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hW0-Wz-OkN">
+                                <rect key="frame" x="25" y="89" width="270" height="361"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbI-hi-5ey">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="1014.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <mutableString key="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in fringilla libero, et imperdiet diam. Vestibulum mattis, velit quis ultrices dictum, mauris purus consequat augue, ut tincidunt risus ante venenatis est. Proin in sodales ligula. Praesent rutrum eleifend ante bibendum finibus. Vivamus tellus elit, sodales in nisi vel, feugiat euismod ex. Sed purus justo, pulvinar et ipsum facilisis, pulvinar ornare purus. Ut tincidunt urna et velit elementum, rutrum aliquam nulla aliquet. Donec eget arcu non ex semper mollis. Nulla efficitur magna ac pharetra finibus. Maecenas eleifend vulputate orci, ut bibendum orci faucibus ut. Nam et lorem sed massa maximus commodo eu ut enim. Sed dignissim velit vitae iaculis pellentesque.
+
+Phasellus porttitor urna a est imperdiet iaculis. Suspendisse massa purus, malesuada non auctor nec, cursus a lectus. Ut laoreet quis ipsum in gravida. Praesent ut sapien quis metus feugiat pretium id sit amet leo. Suspendisse fringilla interdum arcu sed congue. Vivamus tincidunt massa ex, dictum rutrum ipsum condimentum vel. Vestibulum et augue eget velit gravida aliquam. Vestibulum in metus elit. Aliquam molestie neque id maximus tempor. Pellentesque facilisis feugiat ex eget molestie. Nunc pellentesque orci vel magna convallis, lacinia porta velit scelerisque. Maecenas a neque ac tortor luctus hendrerit ac et lacus. Integer nunc nisl, condimentum rhoncus mollis et, fermentum ac augue. Proin in posuere augue, at imperdiet felis.
+
+</mutableString>
+                                                <attributes>
+                                                    <color key="NSColor" white="0.34999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lbI-hi-5ey" secondAttribute="trailing" id="B6C-3k-yUc"/>
+                                    <constraint firstItem="lbI-hi-5ey" firstAttribute="width" secondItem="hW0-Wz-OkN" secondAttribute="width" id="D48-q5-itW"/>
+                                    <constraint firstAttribute="bottom" secondItem="lbI-hi-5ey" secondAttribute="bottom" id="F0v-h4-fWy"/>
+                                    <constraint firstItem="lbI-hi-5ey" firstAttribute="leading" secondItem="hW0-Wz-OkN" secondAttribute="leading" id="dNM-bJ-sYC"/>
+                                    <constraint firstItem="lbI-hi-5ey" firstAttribute="top" secondItem="hW0-Wz-OkN" secondAttribute="top" id="eQ3-Oj-YO3"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="y9d-OU-6hS" firstAttribute="trailing" secondItem="hW0-Wz-OkN" secondAttribute="trailing" constant="25" id="Mhw-pa-gWN"/>
+                            <constraint firstItem="y9d-OU-6hS" firstAttribute="bottom" secondItem="hW0-Wz-OkN" secondAttribute="bottom" constant="25" id="RO6-fN-9cg"/>
+                            <constraint firstItem="hW0-Wz-OkN" firstAttribute="top" secondItem="y9d-OU-6hS" secondAttribute="top" constant="25" id="nNn-vp-pN1"/>
+                            <constraint firstItem="hW0-Wz-OkN" firstAttribute="leading" secondItem="y9d-OU-6hS" secondAttribute="leading" constant="25" id="onf-o4-zKK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="y9d-OU-6hS"/>
                     </view>
                     <toolbarItems>
@@ -495,6 +532,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="programmableToolBarButtonItem" destination="GV7-kJ-VlN" id="idF-P6-gZG"/>
+                        <outlet property="stepMultiLineLabel" destination="lbI-hi-5ey" id="QsT-Yc-DBL"/>
                         <segue destination="HeX-mR-laj" kind="show" identifier="recipeStepSegueLoop" id="jSj-eh-UxC"/>
                     </connections>
                 </viewController>
@@ -655,7 +693,7 @@
         <image name="turkey.image" width="745" height="415"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pjK-8m-c5q"/>
+        <segue reference="VeS-X2-Vb5"/>
         <segue reference="24z-dr-P3r"/>
     </inferredMetricsTieBreakers>
 </document>
