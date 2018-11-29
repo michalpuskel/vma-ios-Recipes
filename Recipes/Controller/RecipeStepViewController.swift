@@ -21,20 +21,27 @@ class RecipeStepViewController: RecipeViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(stepId)
+        let recipe: Recipe = RecipeVC.recipes[RecipeVC.recipeId]
+        
+        if nextStepId < recipe.recipeSteps.count {
+            addRightBarButtonNextStep()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        setBottomToolBarButton()
+        setBottomToolBarButtonGUI()
+        setBottomToolBarButtonNavigation()
     }
     
-    private func setBottomToolBarButton() {
-        if nextStepId < RecipeVC.recipes.count {
+    private func setBottomToolBarButtonGUI() {
+        let recipe: Recipe = RecipeVC.recipes[RecipeVC.recipeId]
+        
+        if nextStepId < recipe.recipeSteps.count {
             navigationController?.toolbar.barTintColor = .white
             programmableToolBarButtonItem.tintColor = #colorLiteral(red: 0.2980392157, green: 0.8509803922, blue: 0.3921568627, alpha: 1)
-            programmableToolBarButtonItem.title = "STEP \(nextStepId)"
+            programmableToolBarButtonItem.title = "STEP \(nextStepId + 1)"
         } else {
             navigationController?.toolbar.barTintColor = #colorLiteral(red: 0.2980392157, green: 0.8509803922, blue: 0.3921568627, alpha: 1)
             programmableToolBarButtonItem.tintColor = .white
@@ -42,15 +49,26 @@ class RecipeStepViewController: RecipeViewController {
         }
     }
     
-
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @objc override func onNextStepTapped(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "recipeStepSegueLoop", sender: nil)
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let recipeStepVC = segue.destination as! RecipeStepViewController
+        recipeStepVC.stepId = nextStepId
+    }
+    
+    private func setBottomToolBarButtonNavigation() {
+        let recipe: Recipe = RecipeVC.recipes[RecipeVC.recipeId]
+        
+        if nextStepId < recipe.recipeSteps.count {
+            programmableToolBarButtonItem.target = self
+            programmableToolBarButtonItem.action = #selector(onNextStepTapped(_:))
+        } else {
+            // todo unwind
+        }
+    }
 
 }
