@@ -76,13 +76,14 @@ will brown nicely.
                    preparationTime: PreparationTime(hours: 0, minutes: 57), nutrition: 312, rating: 3,
                    author: Author(name: "Kyle McCaulley", photo: #imageLiteral(resourceName: "kyle_mccaulley")),
                    ingredients:"""
-1 (12 pound) whole turkey
-6 tablespoons butter, divided
-4 cups warm water
-3 tablespoons chicken bouillon
-2 tablespoons dried parsley
-2 tablespoons dried minced onion
-2 tablespoons seasoning salt
+2 tablespoons butter
+2 tablespoons olive oil
+1/2 onion, chopped
+2 cups long-grain white rice
+3 cups chicken stock
+1 1/2 teaspoons salt
+1 pinch saffron (optional)
+1/4 teaspoon cayenne pepper
 """,
                    recipeSteps: ["""
 Preheat oven to 350 degrees F (175 degrees C). Rinse and wash turkey.
