@@ -26,6 +26,8 @@ class RecipeStepViewController: RecipeViewController {
         if nextStepId < recipe.recipeSteps.count {
             addRightBarButtonNextStep()
         }
+        
+        setCustomContent()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,6 +35,12 @@ class RecipeStepViewController: RecipeViewController {
         
         setBottomToolBarButtonGUI()
         setBottomToolBarButtonNavigation()
+    }
+    
+    private func setCustomContent() {
+        let recipe: Recipe = RecipeVC.recipes[RecipeVC.recipeId]
+        
+        navigationItem.title = recipe.titlePrimary.uppercased() + " #\(stepId + 1)"
     }
     
     private func setBottomToolBarButtonGUI() {
