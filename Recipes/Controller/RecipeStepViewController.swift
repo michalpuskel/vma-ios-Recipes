@@ -67,19 +67,24 @@ class RecipeStepViewController: RecipeViewController {
         performSegue(withIdentifier: "recipeStepSegueLoop", sender: nil)
     }
     
+    @objc private func onViewAllRecipesTapped(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "lastRecipeStepUnwindSegueTableList", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let recipeStepVC = segue.destination as! RecipeStepViewController
-        recipeStepVC.stepId = nextStepId
+        if let recipeStepVC = segue.destination as? RecipeStepViewController {
+            recipeStepVC.stepId = nextStepId
+        }
     }
     
     private func setBottomToolBarButtonNavigation() {
         let recipe: Recipe = RecipeVC.recipes[RecipeVC.recipeId]
         
+        programmableToolBarButtonItem.target = self
         if nextStepId < recipe.recipeSteps.count {
-            programmableToolBarButtonItem.target = self
             programmableToolBarButtonItem.action = #selector(onNextStepTapped(_:))
         } else {
-            // todo unwind
+            programmableToolBarButtonItem.action = #selector(onViewAllRecipesTapped(_:))
         }
     }
 
