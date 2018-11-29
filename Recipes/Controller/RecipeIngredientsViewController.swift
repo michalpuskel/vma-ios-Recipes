@@ -25,10 +25,6 @@ class RecipeIngredientsViewController: RecipeViewController {
         
         setCustomContent()
     }
-
-    @objc override func onNextStepTapped(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "ingredientsNextStepSegueFirstStep", sender: nil)
-    }
     
     private func setCustomContent() {
         let recipe: Recipe = RecipeVC.recipes[RecipeVC.recipeId]
@@ -49,6 +45,17 @@ class RecipeIngredientsViewController: RecipeViewController {
                                                range: NSMakeRange(0, attributedIngredientsText.length))
         
         ingredientsMultiLineLabel.attributedText = attributedIngredientsText
+    }
+    
+    // MARK: - Navigation
+    
+    @objc override func onNextStepTapped(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "ingredientsNextStepSegueFirstStep", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let recipeStepVC = segue.destination as! RecipeStepViewController
+        recipeStepVC.stepId = 0
     }
     
 }

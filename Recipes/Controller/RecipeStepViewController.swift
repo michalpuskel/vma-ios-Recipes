@@ -9,11 +9,37 @@
 import UIKit
 
 class RecipeStepViewController: RecipeViewController {
-
+    
+    var stepId: Int = 0
+    
+    private var nextStepId: Int {
+        return stepId + 1
+    }
+    
+    @IBOutlet private weak var programmableToolBarButtonItem: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        print(stepId)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setBottomToolBarButton()
+    }
+    
+    private func setBottomToolBarButton() {
+        if nextStepId < RecipeVC.recipes.count {
+            navigationController?.toolbar.barTintColor = .white
+            programmableToolBarButtonItem.tintColor = #colorLiteral(red: 0.2980392157, green: 0.8509803922, blue: 0.3921568627, alpha: 1)
+            programmableToolBarButtonItem.title = "STEP \(nextStepId)"
+        } else {
+            navigationController?.toolbar.barTintColor = #colorLiteral(red: 0.2980392157, green: 0.8509803922, blue: 0.3921568627, alpha: 1)
+            programmableToolBarButtonItem.tintColor = .white
+            programmableToolBarButtonItem.title = "VIEW ALL RECIPES"
+        }
     }
     
 

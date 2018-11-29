@@ -30,6 +30,8 @@ class RecipeViewController: UIViewController {
         navigationItem.rightBarButtonItem = nextStepButton
     }
     
+    // MARK: - Navigation
+    
     @objc func onNextStepTapped(_ sender: UIBarButtonItem) {
         // override to perform specific segue
     }
