@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A02F5AD021B0B9A6005EC3D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A02F5ACF21B0B9A6005EC3D6 /* Assets.xcassets */; };
 		A07DF3A021AC796900F8940C /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DF39F21AC796900F8940C /* RecipeDetailViewController.swift */; };
 		A07DF3A821ACC2F100F8940C /* RecipeIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DF3A721ACC2F100F8940C /* RecipeIngredientsViewController.swift */; };
 		A07E9F3F21AF19E800432340 /* RecipeStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E9F3E21AF19E800432340 /* RecipeStepViewController.swift */; };
 		A0A299EE21AB03A9001D74AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A299ED21AB03A9001D74AB /* AppDelegate.swift */; };
 		A0A299F321AB03A9001D74AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A299F121AB03A9001D74AB /* Main.storyboard */; };
-		A0A299F521AB03AA001D74AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A299F421AB03AA001D74AB /* Assets.xcassets */; };
 		A0A299F821AB03AA001D74AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A299F621AB03AA001D74AB /* LaunchScreen.storyboard */; };
 		A0A29A0321AB0BBE001D74AB /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A0221AB0BBE001D74AB /* Recipe.swift */; };
 		A0A29A0521AB11C8001D74AB /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29A0421AB11C8001D74AB /* FoodCategory.swift */; };
@@ -27,13 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A02F5ACF21B0B9A6005EC3D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A07DF39F21AC796900F8940C /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 		A07DF3A721ACC2F100F8940C /* RecipeIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredientsViewController.swift; sourceTree = "<group>"; };
 		A07E9F3E21AF19E800432340 /* RecipeStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStepViewController.swift; sourceTree = "<group>"; };
 		A0A299EA21AB03A8001D74AB /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A299ED21AB03A9001D74AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0A299F221AB03A9001D74AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A0A299F421AB03AA001D74AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0A299F721AB03AA001D74AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0A299F921AB03AA001D74AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0A29A0221AB0BBE001D74AB /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
@@ -84,8 +84,8 @@
 				A0A299F921AB03AA001D74AB /* Info.plist */,
 				A0A299F621AB03AA001D74AB /* LaunchScreen.storyboard */,
 				A0A299ED21AB03A9001D74AB /* AppDelegate.swift */,
-				A0A299F421AB03AA001D74AB /* Assets.xcassets */,
 				A0A299F121AB03A9001D74AB /* Main.storyboard */,
+				A02F5ACF21B0B9A6005EC3D6 /* Assets.xcassets */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0A299F821AB03AA001D74AB /* LaunchScreen.storyboard in Resources */,
-				A0A299F521AB03AA001D74AB /* Assets.xcassets in Resources */,
+				A02F5AD021B0B9A6005EC3D6 /* Assets.xcassets in Resources */,
 				A0A299F321AB03A9001D74AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
