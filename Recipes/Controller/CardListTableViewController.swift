@@ -10,8 +10,8 @@ import UIKit
 
 class CardListTableViewController: TableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "cardList")
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "cardList")
