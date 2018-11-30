@@ -84,8 +84,8 @@
 				A0A299F921AB03AA001D74AB /* Info.plist */,
 				A0A299F621AB03AA001D74AB /* LaunchScreen.storyboard */,
 				A0A299ED21AB03A9001D74AB /* AppDelegate.swift */,
-				A0A299F121AB03A9001D74AB /* Main.storyboard */,
 				A02F5ACF21B0B9A6005EC3D6 /* Assets.xcassets */,
+				A0A299F121AB03A9001D74AB /* Main.storyboard */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";

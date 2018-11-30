@@ -690,7 +690,7 @@ Phasellus porttitor urna a est imperdiet iaculis. Suspendisse massa purus, males
         <image name="cardList" width="30" height="30"/>
         <image name="kyle_mccaulley" width="104" height="85"/>
         <image name="miniList" width="30" height="30"/>
-        <image name="rice.ingredients" width="450" height="320"/>
+        <image name="rice.ingredients" width="449" height="300"/>
         <image name="star" width="50" height="50"/>
         <image name="turkey.image" width="745" height="415"/>
     </resources>

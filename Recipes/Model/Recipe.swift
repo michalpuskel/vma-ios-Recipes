@@ -76,10 +76,10 @@ extension Recipe {
                                  ]))
         
         recipes.append(
-            Recipe(imagePreview: #imageLiteral(resourceName: "rice.ico"), imageMain: #imageLiteral(resourceName: "rice.image"), imageIngredients: #imageLiteral(resourceName: "rice.ingredients"),
+            Recipe(imagePreview: #imageLiteral(resourceName: "pancakes.ico"), imageMain: #imageLiteral(resourceName: "pancakes.image"), imageIngredients: #imageLiteral(resourceName: "pancakes.ingredients"),
                    titlePrimary: "Pumpkin Pancakes", titleSecondary: "", foodCategory: .dessert,
                    preparationTime: PreparationTime(hours: 0, minutes: 40), nutrition: 278, rating: 5,
-                   author: Author(name: "CookieEater", photo: #imageLiteral(resourceName: "kyle_mccaulley")),
+                   author: Author(name: "CookieEater", photo: #imageLiteral(resourceName: "cookieeater")),
                    ingredients:"""
 1 1/2 cups milk
 1 cup pumpkin puree
@@ -100,10 +100,10 @@ extension Recipe {
                                  ]))
         
         recipes.append(
-            Recipe(imagePreview: #imageLiteral(resourceName: "rice.ico"), imageMain: #imageLiteral(resourceName: "rice.image"), imageIngredients: #imageLiteral(resourceName: "rice.ingredients"),
+            Recipe(imagePreview: #imageLiteral(resourceName: "sausage.ico"), imageMain: #imageLiteral(resourceName: "sausage.image"), imageIngredients: #imageLiteral(resourceName: "sausage.ingredients"),
                    titlePrimary: "Sheboygan Brats", titleSecondary: "Grilled", foodCategory: .meat,
                    preparationTime: PreparationTime(hours: 0, minutes: 52), nutrition: 534, rating: 0,
-                   author: Author(name: "Chef John", photo: #imageLiteral(resourceName: "kyle_mccaulley")),
+                   author: Author(name: "Chef John", photo: #imageLiteral(resourceName: "chef_john")),
                    ingredients:"""
 1/4 cup butter
 2 medium onions, thinly sliced
@@ -118,10 +118,10 @@ extension Recipe {
                                  ]))
         
         recipes.append(
-            Recipe(imagePreview: #imageLiteral(resourceName: "rice.ico"), imageMain: #imageLiteral(resourceName: "rice.image"), imageIngredients: #imageLiteral(resourceName: "rice.ingredients"),
+            Recipe(imagePreview: #imageLiteral(resourceName: "fish.ico"), imageMain: #imageLiteral(resourceName: "fish.image"), imageIngredients: #imageLiteral(resourceName: "fish.ingredients"),
                    titlePrimary: "Rainbow Trout", titleSecondary: "Baked Fresh", foodCategory: .vegetarian,
                    preparationTime: PreparationTime(hours: 0, minutes: 30), nutrition: 373, rating: 2,
-                   author: Author(name: "muqiblue", photo: #imageLiteral(resourceName: "kyle_mccaulley")),
+                   author: Author(name: "muqiblue", photo: #imageLiteral(resourceName: "muqiblue")),
                    ingredients:"""
 2 teaspoons olive oil, or to taste
 2 whole rainbow trout, gutted and cleaned, heads and tails still on
@@ -138,10 +138,10 @@ salt and freshly ground black pepper to taste
                                  ]))
         
         recipes.append(
-            Recipe(imagePreview: #imageLiteral(resourceName: "rice.ico"), imageMain: #imageLiteral(resourceName: "rice.image"), imageIngredients: #imageLiteral(resourceName: "rice.ingredients"),
+            Recipe(imagePreview: #imageLiteral(resourceName: "cake.ico"), imageMain: #imageLiteral(resourceName: "cake.image"), imageIngredients: #imageLiteral(resourceName: "cake.ingredients"),
                    titlePrimary: "Jenny's Cake", titleSecondary: "Black Forest", foodCategory: .dessert,
                    preparationTime: PreparationTime(hours: 1, minutes: 0), nutrition: 477, rating: 1,
-                   author: Author(name: "Vanessa Greaves", photo: #imageLiteral(resourceName: "kyle_mccaulley")),
+                   author: Author(name: "Vanessa Greaves", photo: #imageLiteral(resourceName: "vanessa_greaves")),
                    ingredients:"""
 1 cup milk
 1 tablespoon vinegar
